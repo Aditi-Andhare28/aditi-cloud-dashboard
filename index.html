@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditi Cloud Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #101827;
+            color: white;
+        }
+
+        header {
+            background: #172b46;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #54c8ff;
+        }
+
+        main {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1d304b;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .card h2 {
+            color: #54c8ff;
+        }
+
+        button {
+            background: #159bd7;
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #087bb2;
+        }
+
+        #message {
+            color: #65e6a3;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #aab7c9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Aditi Cloud Dashboard</h1>
+        <p>My First DevOps Deployment Project</p>
+    </header>
+
+    <main>
+
+        <section class="intro">
+            <h2>Welcome to My Cloud Application!</h2>
+            <p>
+                Exploring AWS, Docker, Jenkins
+                and Cloud Technologies.
+            </p>
+
+            <button onclick="showMessage()">
+                Check Application
+            </button>
+
+            <p id="message"></p>
+        </section>
+
+        <section class="cards">
+
+            <div class="card">
+                <h2>AWS</h2>
+                <p>Cloud Infrastructure</p>
+            </div>
+
+            <div class="card">
+                <h2>Docker</h2>
+                <p>Containerization</p>
+            </div>
+
+            <div class="card">
+                <h2>Jenkins</h2>
+                <p>CI/CD Automation</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        Built with HTML, CSS and JavaScript
+        <p>Deployed using Docker on AWS EC2</p>
+    </footer>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").innerText =
+                "Application is working successfully!";
+        }
+    </script>
+
+</body>
+</html>
